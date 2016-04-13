@@ -2,6 +2,13 @@
 Introduction à la réalitée virtuelle grâce au framework A-Frame
 
 
+# Ce que permet A-Frame
+
+A-Frame permet de créer des scenes en VR qui fonctionnent sur Desktop, Oculus et mobile avec seulement de l'HTML.
+On peut manipuler nos scènes avec JavaScript comme nous le ferions pour du HTML, et on peut utiliser des framework JavaScript.
+
+A-Frame introduit le modèle entity-component-system, un modèle couramment utilisé dans le développement 3D et jeux vidéo.
+
 ## Entity-Component-System
 
 * Une entité (entity) est un objet d'usage général qui fait et rend rien en soi.
