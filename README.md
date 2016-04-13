@@ -33,3 +33,9 @@ Et si nous voulons ajouter de la lumière à notre objet, nous pouvons utiliser 
 
 <pre><code><a-entity geometry="primitive: box" material="color: red"
                 light="type: point; intensity: 2.0"></code></pre>
+                
+<b>geometry</b> --> La composante de la géométrie fournit une forme de base pour une entité. La géométrie générale est définie par la propriété <b>primitive</b>
+La géométrie primitive en infographie, signifie une forme extrêmement basique.
+
+Une fois la primitive définie, des propriétés supplémentaires sont utilisées pour mieux définir la géométrie.
+Un composant <b>material</b> est généralement définie à côté pour donner une apparence aux côtés de la forme pour créer un maillage complet.
