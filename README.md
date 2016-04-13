@@ -23,13 +23,13 @@ Dans A-Frame, les entités sont liés aux composants position, rotation et scale
 
 Une entité de base n'a pas d'apparence, de comportement ou de fonctionnalité, pour dire les choses simplement, il ne fait rien.
 
-<code><a-entity></code>
+<pre><code><a-entity></code></pre>
 
 Nous pouvons lui affecter des composants afin d'afficher quelque-chose ou lui faire faire quelque-chose. Par exemple, pour lui donner une forme et une apparence, nous pouvons lui affecter les composants de géométrie et de matériaux :
 
-<code><a-entity geometry="primitive: box" material="color: red"></code>
+<pre><code><a-entity geometry="primitive: box" material="color: red"></code></pre>
 
 Et si nous voulons ajouter de la lumière à notre objet, nous pouvons utiliser le composant <b>light</b> :
 
-<code><a-entity geometry="primitive: box" material="color: red"
-                light="type: point; intensity: 2.0"></code>
+<pre><code><a-entity geometry="primitive: box" material="color: red"
+                light="type: point; intensity: 2.0"></code></pre>
