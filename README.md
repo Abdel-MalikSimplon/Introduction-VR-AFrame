@@ -39,3 +39,28 @@ La géométrie primitive en infographie, signifie une forme extrêmement basique
 
 Une fois la primitive définie, des propriétés supplémentaires sont utilisées pour mieux définir la géométrie.
 Un composant <b>material</b> est généralement définie à côté pour donner une apparence aux côtés de la forme pour créer un maillage complet.
+
+## Les propriétés de la géométrie primitive
+### Les propriétés de base :
+
+buffer -> transforme la géométrie dans un BufferGeometry pour réduire l'utilisation de la mémoire au prix d'être plus difficile à manipuler. Valeur par défault : true.
+
+primitive -> peut-être : box, circle, cone, cylinder, plane, ring, sphere, torus, torusKnot. Valeur par défaut : None.
+
+skipCache -> désactive la récupération de l'objet de la géométrie partagée à partir du cache. Valeur par défault : false.
+
+Box : La primitive box définie une boite (un quadrilatère quelconque, pas seulement un cube).
+
+<a-entity geometry="primitive: box; width: 1; height: 1; depth: 1"></a-entity>
+
+Les valeurs possbles pour la box sont width, height et depth :
+
+width -> Largeur (en mètres) des côtés sur l'axe x. Valeur par défaut -> 1.
+height -> Hauteur (en mètres) des côtés de l'axe y.
+depth -> Profondeur (en mètres) des côtés de l'axe Z.
+
+Circle : La primitive circle définie les cercles en deux dimensions, qui peuvent être des cercles complets ou des cercles partiels (comme pac-man).
+Note : de base le cercle est plat, un seul côté du cercle est donc rendu, si “side: double” (côté double) est pas spécifié sur le composant material.
+
+<a-entity geometry="primitive: circle; radius: 1" material="side: double"></a-entity>
+
