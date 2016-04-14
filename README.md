@@ -64,3 +64,34 @@ Note : de base le cercle est plat, un seul côté du cercle est donc rendu, si �
 
 <a-entity geometry="primitive: circle; radius: 1" material="side: double"></a-entity>
 
+Les propriétés de la primitive circle sont :
+
+<b>radius</b> -> rayon (en mètres) du cercle. Valeur par défaut -> 1.
+
+segments -> nombre de triangles pour construire le cercle, comme des tranches de pizza. Un plus grand nombre de segments signifie que le cercle sera plus rond.  Valeur par défaut -> 32.
+
+thetaStart -> L'angle pour le premier segment où il commence. Peut être utilisé pour définir un cercle partiel. Valeur par défaut -> 0.
+
+thetaLength -> L'angle au centre (en degrés), par défaut "360", ce qui en fait un cercle complet. Valeur par défaut -> 360.
+
+
+Cone : La primitive "cone" est un cylindre primitif avec haut et bas ayant un rayon variables.
+
+<a-entity geometry="primitive: cone; radiusBottom: 1; radiusTop: 0.1"></a-entity>
+Ses propriétés sont :
+
+height -> Hauteur du cône. Valeur par défaut -> 2
+
+openEnded -> Définie si les extrêmités du cône sont ouverts (true) ou plafonnés (false). Valeur par défaut -> false.
+
+radiusBottom -> Le rayon de l'extrémité supérieur du cône. Valeur par défaut -> 1.
+
+radiusTop -> Le rayon de l'extrêmité supérieur du cône. Valeur par défaut -> 1.
+
+segmentsRadial -> Nombre de faces segmentées autour de la circonférence du cône. Valeur par défaut -> 36.
+
+segmentsHeight -> Nombre de rangées de faces le long de la hauteur du cône. Valeur par défaut -> 18.
+
+thetaStart -> Angle de départ en degrés. Valeur par défaut -> 0.
+
+thetaLength -> Angle central en degrés. Valeur par défaut -> 360.
