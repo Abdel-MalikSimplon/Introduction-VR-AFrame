@@ -11,9 +11,9 @@ A-Frame introduit le modèle entity-component-system, un modèle couramment util
 
 ## Entity-Component-System
 
-* Une entité (entity) est un objet d'usage général qui fait et rend rien en soi.
-* Un composant (component) est un module réutilisable qui est branché sur les entités afin de fournir l'apparence, le comportement et / ou fonctionnalité. ils sont plug- and-play pour les objets .
-* Un systeme (A system) fournit une portée globale, des services, et la gestion des classes de composants.
+* <b>Une entité</b> (entity) est un objet d'usage général qui fait et rend rien en soi.
+* <b>Un composant</b> (component) est un module réutilisable qui est branché sur les entités afin de fournir l'apparence, le comportement et / ou fonctionnalité. ils sont plug- and-play pour les objets .
+* <b>Un systeme</b> (A system) fournit une portée globale, des services, et la gestion des classes de composants.
 
 # Entity
 
@@ -43,11 +43,11 @@ Un composant <b>material</b> est généralement définie à côté pour donner u
 ## Les propriétés de la géométrie primitive
 ### Les propriétés de base :
 
-buffer -> transforme la géométrie dans un BufferGeometry pour réduire l'utilisation de la mémoire au prix d'être plus difficile à manipuler. Valeur par défault : true.
+<b>buffer</b> -> transforme la géométrie dans un BufferGeometry pour réduire l'utilisation de la mémoire au prix d'être plus difficile à manipuler. Valeur par défault : true.
 
-primitive -> peut-être : box, circle, cone, cylinder, plane, ring, sphere, torus, torusKnot. Valeur par défaut : None.
+<b>primitive</b> -> peut-être : box, circle, cone, cylinder, plane, ring, sphere, torus, torusKnot. Valeur par défaut : None.
 
-skipCache -> désactive la récupération de l'objet de la géométrie partagée à partir du cache. Valeur par défault : false.
+<b>skipCache</b> -> désactive la récupération de l'objet de la géométrie partagée à partir du cache. Valeur par défault : false.
 
 Box : La primitive box définie une boite (un quadrilatère quelconque, pas seulement un cube).
 
@@ -55,9 +55,9 @@ Box : La primitive box définie une boite (un quadrilatère quelconque, pas seul
 
 Les valeurs possbles pour la box sont width, height et depth :
 
-width -> Largeur (en mètres) des côtés sur l'axe x. Valeur par défaut -> 1.
-height -> Hauteur (en mètres) des côtés de l'axe y.
-depth -> Profondeur (en mètres) des côtés de l'axe Z.
+<b>width</b> -> Largeur (en mètres) des côtés sur l'axe x. Valeur par défaut -> 1.
+<b>height</b> -> Hauteur (en mètres) des côtés de l'axe y.
+<b>depth</b> -> Profondeur (en mètres) des côtés de l'axe Z.
 
 Circle : La primitive circle définie les cercles en deux dimensions, qui peuvent être des cercles complets ou des cercles partiels (comme pac-man).
 Note : de base le cercle est plat, un seul côté du cercle est donc rendu, si “side: double” (côté double) est pas spécifié sur le composant material.
@@ -68,11 +68,11 @@ Les propriétés de la primitive circle sont :
 
 <b>radius</b> -> rayon (en mètres) du cercle. Valeur par défaut -> 1.
 
-segments -> nombre de triangles pour construire le cercle, comme des tranches de pizza. Un plus grand nombre de segments signifie que le cercle sera plus rond.  Valeur par défaut -> 32.
+<b>segments</b> -> nombre de triangles pour construire le cercle, comme des tranches de pizza. Un plus grand nombre de segments signifie que le cercle sera plus rond.  Valeur par défaut -> 32.
 
-thetaStart -> L'angle pour le premier segment où il commence. Peut être utilisé pour définir un cercle partiel. Valeur par défaut -> 0.
+<b>thetaStart</b> -> L'angle pour le premier segment où il commence. Peut être utilisé pour définir un cercle partiel. Valeur par défaut -> 0.
 
-thetaLength -> L'angle au centre (en degrés), par défaut "360", ce qui en fait un cercle complet. Valeur par défaut -> 360.
+<b>thetaLength</b> -> L'angle au centre (en degrés), par défaut "360", ce qui en fait un cercle complet. Valeur par défaut -> 360.
 
 
 Cone : La primitive "cone" est un cylindre primitif avec haut et bas ayant un rayon variables.
@@ -80,18 +80,18 @@ Cone : La primitive "cone" est un cylindre primitif avec haut et bas ayant un ra
 <a-entity geometry="primitive: cone; radiusBottom: 1; radiusTop: 0.1"></a-entity>
 Ses propriétés sont :
 
-height -> Hauteur du cône. Valeur par défaut -> 2
+<b>height</b> -> Hauteur du cône. Valeur par défaut -> 2
 
-openEnded -> Définie si les extrêmités du cône sont ouverts (true) ou plafonnés (false). Valeur par défaut -> false.
+<b>openEnded</b> -> Définie si les extrêmités du cône sont ouverts (true) ou plafonnés (false). Valeur par défaut -> false.
 
-radiusBottom -> Le rayon de l'extrémité supérieur du cône. Valeur par défaut -> 1.
+<b>radiusBottom</b> -> Le rayon de l'extrémité supérieur du cône. Valeur par défaut -> 1.
 
-radiusTop -> Le rayon de l'extrêmité supérieur du cône. Valeur par défaut -> 1.
+<b>radiusTop</b> -> Le rayon de l'extrêmité supérieur du cône. Valeur par défaut -> 1.
 
-segmentsRadial -> Nombre de faces segmentées autour de la circonférence du cône. Valeur par défaut -> 36.
+<b>segmentsRadial</b> -> Nombre de faces segmentées autour de la circonférence du cône. Valeur par défaut -> 36.
 
-segmentsHeight -> Nombre de rangées de faces le long de la hauteur du cône. Valeur par défaut -> 18.
+<b>segmentsHeight</b> -> Nombre de rangées de faces le long de la hauteur du cône. Valeur par défaut -> 18.
 
-thetaStart -> Angle de départ en degrés. Valeur par défaut -> 0.
+<b>thetaStart</b> -> Angle de départ en degrés. Valeur par défaut -> 0.
 
-thetaLength -> Angle central en degrés. Valeur par défaut -> 360.
+<b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
