@@ -95,3 +95,36 @@ Ses propriétés sont :
 <b>thetaStart</b> -> Angle de départ en degrés. Valeur par défaut -> 0.
 
 <b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
+
+## Cylindre Primitif
+
+Le cylindre primitif peut définir des cylindres dans le sens traditionnel, comme un coca-cola, mais il peut également définir des formes telles que des tubes et des surfaces courbes. Nous allons passer eb revue certaines recette de cylindre ci-dessous.
+
+### Cylindre basic
+
+Un cylindre traditionnel peut être définie en utilisant seulement une hauteure et un rayon :
+
+<a-entity geometry="primitive: cylinder; height: 3; radius: 2"></a-entity>
+
+### Tube
+
+Les tubes peuvent être définis en rendant le cylindre à l'extrémité ouverte, ce qui supprime les surfaces supérieure et inférieure du cylindre de telle sorte que l'intérieur soit visible. Un matériau à double face sera nécessaire pour afficher correctement.
+
+<a-entity geometry="primitive: cylinder; openEnded: true" material="side: double"></a-entity>
+
+### Surface incurvée
+
+Les surfaces incurvée peuvent être définies en spécifiant l'angle "thetaLength" telle que le cylindre ne courbe pas tout autour, ce qui rend le cylindre ouvert, puis ajouter un material -> side: double;
+
+<a-entity geometry="primitive: cylinder; openEnded: true; thetaLength: 180"
+          material="side: double"></a-entity>
+          
+Les propriétés d'un cylindre incurvé sont :
+
+<b>radius</b> -> Le rayon du cylindre. Valeur par défaut -> 1.
+<b>height</b> -> Hauteur du cylindre. Valeur par défaut -> 2.
+<b>segmentsRadial</b> -> Nombre de faces segmentées autour de la circonférence du cylindre. Valeur par défaut -> 36.
+<b>segmentsHeight</b> -> Nombre de rangés de faces le long de la hauteur du cylindre. Valeur par défaut -> 18.
+<b>openEnded</b> -> Définie sir les extrémités du cylindre sont ouvertes (true) ou plafonés (false). Valeur par défaut -> false.
+<b>thetaStart</b> -> Angle de départ en degrés. Valeur par défaut -> 0.
+<b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
