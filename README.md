@@ -122,9 +122,15 @@ Les surfaces incurvée peuvent être définies en spécifiant l'angle "thetaLeng
 Les propriétés d'un cylindre incurvé sont :
 
 <b>radius</b> -> Le rayon du cylindre. Valeur par défaut -> 1.
+
 <b>height</b> -> Hauteur du cylindre. Valeur par défaut -> 2.
+
 <b>segmentsRadial</b> -> Nombre de faces segmentées autour de la circonférence du cylindre. Valeur par défaut -> 36.
+
 <b>segmentsHeight</b> -> Nombre de rangés de faces le long de la hauteur du cylindre. Valeur par défaut -> 18.
+
 <b>openEnded</b> -> Définie sir les extrémités du cylindre sont ouvertes (true) ou plafonés (false). Valeur par défaut -> false.
+
 <b>thetaStart</b> -> Angle de départ en degrés. Valeur par défaut -> 0.
+
 <b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
