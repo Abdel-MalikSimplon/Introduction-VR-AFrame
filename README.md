@@ -137,14 +137,14 @@ Les propriétés d'un cylindre incurvé sont :
 
 <b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
 
-## Prisme
+### Prisme
 
 D'autres types de prismes peuvent êtres définie en faisant varier le nombre de segments radiaux (àsavoir, les côtés). Par exemple, pour faire un prisme hexagonal :
 <pre>
   <code><a-entity geometry="primitive: cylinder; segmentsRadial: 6"></a-entity></code>
 </pre>
 
-## Plane
+### Plane
 
 La primitive plane définit une surface plane. Noter que parce qu'il est plat, seulement un seul côté du plan sera rendu si "side: double" n'est pas spécifié sur le composant material.
 
@@ -158,7 +158,7 @@ Ses propriétés sont :
 <b>width</b> -> Largeur le long de l'axe X.
 <b>height</b> -> Hauteur le long de l'axe Y.
 
-## Ring
+### Ring
 
 La géométrie ring définit un anneau plat, comme un C. Noter que parce qu'il est plat, seulement un côté de la bague sera rendue si "side: double" n'est pas spécifié sur le composant material.
 
