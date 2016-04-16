@@ -136,3 +136,49 @@ Les propriétés d'un cylindre incurvé sont :
 <b>thetaStart</b> -> Angle de départ en degrés. Valeur par défaut -> 0.
 
 <b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
+
+## Prisme
+
+D'autres types de prismes peuvent êtres définie en faisant varier le nombre de segments radiaux (àsavoir, les côtés). Par exemple, pour faire un prisme hexagonal :
+<pre>
+  <code><a-entity geometry="primitive: cylinder; segmentsRadial: 6"></a-entity></code>
+</pre>
+
+## Plane
+
+La primitive plane définit une surface plane. Noter que parce qu'il est plat, seulement un seul côté du plan sera rendu si "side: double" n'est pas spécifié sur le composant material.
+
+<pre>
+  <code><a-entity geometry="primitive: plane; height: 10; width: 10"
+          material="side: double"></a-entity>
+  </code>
+</pre>
+Ses propriétés sont :
+
+<b>width</b> -> Largeur le long de l'axe X.
+<b>height</b> -> Hauteur le long de l'axe Y.
+
+## Ring
+
+La géométrie ring définit un anneau plat, comme un C. Noter que parce qu'il est plat, seulement un côté de la bague sera rendue si "side: double" n'est pas spécifié sur le composant material.
+
+<pre>
+  <code>
+    <a-entity geometry="primitive: ring; radiusInner: 0.5; radiusOuter: 1"
+              material="side: double"></a-entity>
+  </code>
+</pre>
+
+Ses propriétés sont :
+
+<b>radius</b> -> Rayon du trou intérieur de l'anneau. Valeur par défaut -> 1.
+
+<b>radiusOuter</b> -> Le rayon du bord extérieur de l'anneau. Valeur par défaut -> 1.
+
+<b>segmentsTheta</b> -> Nombre de segments. Un nombre plus élevé signifie que l'anneau sera plus rond. Valeur par défaut -> 32.
+
+<b>segmentsPhi</b> -> Nombre de triangles dans chaque face définie par des segments theta. Valeur par défaut -> 8.
+
+<b>thetaStart</b> -> Angle de départ en degrés. Valeur par défaut -> 0.
+
+<b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
