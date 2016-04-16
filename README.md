@@ -51,7 +51,7 @@ Un composant <b>material</b> est généralement définie à côté pour donner u
 
 Box : La primitive box définie une boite (un quadrilatère quelconque, pas seulement un cube).
 
-<a-entity geometry="primitive: box; width: 1; height: 1; depth: 1"></a-entity>
+<pre><code><a-entity geometry="primitive: box; width: 1; height: 1; depth: 1"></a-entity></code></pre>
 
 Les valeurs possbles pour la box sont width, height et depth :
 
@@ -62,7 +62,7 @@ Les valeurs possbles pour la box sont width, height et depth :
 Circle : La primitive circle définie les cercles en deux dimensions, qui peuvent être des cercles complets ou des cercles partiels (comme pac-man).
 Note : de base le cercle est plat, un seul côté du cercle est donc rendu, si “side: double” (côté double) est pas spécifié sur le composant material.
 
-<a-entity geometry="primitive: circle; radius: 1" material="side: double"></a-entity>
+<pre><code><a-entity geometry="primitive: circle; radius: 1" material="side: double"></a-entity></code></pre>
 
 Les propriétés de la primitive circle sont :
 
@@ -77,7 +77,7 @@ Les propriétés de la primitive circle sont :
 
 Cone : La primitive "cone" est un cylindre primitif avec haut et bas ayant un rayon variables.
 
-<a-entity geometry="primitive: cone; radiusBottom: 1; radiusTop: 0.1"></a-entity>
+<pre><code><a-entity geometry="primitive: cone; radiusBottom: 1; radiusTop: 0.1"></a-entity></code></pre>
 Ses propriétés sont :
 
 <b>height</b> -> Hauteur du cône. Valeur par défaut -> 2
@@ -104,20 +104,20 @@ Le cylindre primitif peut définir des cylindres dans le sens traditionnel, comm
 
 Un cylindre traditionnel peut être définie en utilisant seulement une hauteure et un rayon :
 
-<a-entity geometry="primitive: cylinder; height: 3; radius: 2"></a-entity>
+<pre><code><a-entity geometry="primitive: cylinder; height: 3; radius: 2"></a-entity></code></pre>
 
 ### Tube
 
 Les tubes peuvent être définis en rendant le cylindre à l'extrémité ouverte, ce qui supprime les surfaces supérieure et inférieure du cylindre de telle sorte que l'intérieur soit visible. Un matériau à double face sera nécessaire pour afficher correctement.
 
-<a-entity geometry="primitive: cylinder; openEnded: true" material="side: double"></a-entity>
+<code><a-entity geometry="primitive: cylinder; openEnded: true" material="side: double"></a-entity></code></pre>
 
 ### Surface incurvée
 
 Les surfaces incurvée peuvent être définies en spécifiant l'angle "thetaLength" telle que le cylindre ne courbe pas tout autour, ce qui rend le cylindre ouvert, puis ajouter un material -> side: double;
 
-<a-entity geometry="primitive: cylinder; openEnded: true; thetaLength: 180"
-          material="side: double"></a-entity>
+<pre><code><a-entity geometry="primitive: cylinder; openEnded: true; thetaLength: 180"
+          material="side: double"></a-entity></code></pre>
           
 Les propriétés d'un cylindre incurvé sont :
 
