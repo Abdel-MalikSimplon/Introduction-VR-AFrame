@@ -220,3 +220,41 @@ Ses propriétés sont :
 <b>thetaStart</b> -> Angle de départ en degrés. Valeur par défaut -> 0.
 
 <b>thetaLength</b> -> Angle central en degrés. Valeur par défaut -> 360.
+
+###Torus Knot
+
+Pas compris...
+
+###thetaLength and thetaStart
+
+en degrés, thetaStart définit où commencer un cercle et thetaLength définit l'endroit où un cercle se termine. si nous voulions faire une (forme, nous commencerions le cercle à mi-parcours et de définir la longueur que la moitié d'un cercle que nous pouvons faire cela avec thetaSart :. 180 ; thetaLength : 180. ou si nous voulions faire une ) forme. nous pouvons ne faire thetastart : 0 ; thetalength : 180 .
+cas utiles pourraient être à thetastart animation pour créer un effet spinner ou animer thetalength sur un curseur basé fusible pour la rétroaction visuelle .
+
+### Translate
+
+la propriété traduire traduit la géométrie. il est fourni vec3. ceci est une courte main utile pour traduire la géométrie de se déplacer efficacement son point de pivot lors de l'exécution des animations.
+
+## Définir votre propre géométrie
+
+s'il y a une géométrie que vous avez besoin que ne sont pas fournis par le composant de géométrie standard, vous pouvez enregistrer votre propre composant de géométrie.
+
+<pre>
+  <code>
+    ```js
+    AFRAME.registerComponent(‘my-geometry’, {
+    / Called on component attach and data update. /
+    update: function () {
+    // Grab the mesh.
+    var mesh = this.el.getOrCreateObject3D(‘mesh’, THREE.Mesh);
+    
+    // Provide your own geometry. var geometry = mesh.geometry = new THREE.Geometry(); geometry.vertices.push( new THREE.Vector3(-10, 10, 0), new THREE.Vector3(-10, -10, 0), new THREE.Vector3( 10, -10, 0) ); geometry.faces.push(new THREE.Face3(0, 1, 2)); geometry.computeBoundingSphere();
+    
+    },
+    
+    / Called on component detach. /
+    remove: function () {
+    this.el.getObject3D(‘mesh’).geometry = new THREE.Geometry();
+    }
+    });
+  </code>
+</pre>
